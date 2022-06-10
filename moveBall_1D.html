@@ -1,0 +1,31 @@
+<div id="ball" style="
+  z-index:5;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:green"></div>
+
+<script>
+
+let velocity = 10;
+let position = 0;
+let ball = document.getElementById('ball');
+let targetPixel = 500;
+
+function moveball(){
+
+  position += velocity;
+  ball.style.left = position + 'px';
+  if (position === targetPixel){
+    velocity = -10;
+  } else if (position === 0){
+    velocity = 10;
+  }
+  
+}setInterval(moveball,100);
+
+
+</script>

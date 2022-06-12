@@ -1,0 +1,20 @@
+<html>
+  <script>
+    window.onload = function () {
+      const tag = document.getElementById("tag1");
+      const part = document.getElementById("part1");
+      var time = 100;
+      let countdown = function () {
+        time = time - 1;
+        tag.innerHTML =
+          "Goodbye Alliens : your ship will leave in " + time + " secs";
+      };
+      setInterval(countdown, 500);
+    };
+  </script>
+  <body>
+    <div id="part1">
+      <h1 id="tag1">Hi Earthlings</h1>
+    </div>
+  </body>
+</html>

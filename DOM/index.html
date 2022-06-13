@@ -3,14 +3,24 @@
     window.onload = function () {
       const tag = document.getElementById("tag1");
       const part = document.getElementById("part1");
+
       var time = 100;
+      
+      
       let countdown = function () {
         time = time - 1;
-        tag.innerHTML =
-          "Goodbye Alliens : your ship will leave in " + time + " secs";
+        // After the counter reaches zero, make the background of the page red.
+        if (time === 0) {
+        part.style.backgroundColor = "red";
+        clearInterval(myInterval);
       };
-      setInterval(countdown, 500);
-    };
+        tag.innerHTML =
+          "Goodbye Alliens : your ship will leave in " + time + " secs";}
+    
+         
+      const myInterval = setInterval(countdown, 500);
+    
+    }
   </script>
   <body>
     <div id="part1">

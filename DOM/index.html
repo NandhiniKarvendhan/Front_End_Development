@@ -4,7 +4,7 @@
       const tag = document.getElementById("tag1");
       const part = document.getElementById("part1");
 
-      var time = 10;
+      var time = 100;
       
       
       let countdown = function () {
@@ -16,7 +16,7 @@
       };
         tag.innerHTML =
           "Goodbye Alliens : your ship will leave in " + time + " secs";}
-    
+          part.style.backgroundColor = "#89CFF0";
          
       const myInterval = setInterval(countdown, 1000);
     

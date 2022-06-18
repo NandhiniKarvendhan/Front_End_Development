@@ -1,0 +1,40 @@
+h2{
+    color: #000;
+    text-align: center;
+}
+#myDIV{
+/* margin: 100px 50px 50px 50px; */
+background-color: aquamarine;
+text-align: center;
+padding: 100px 50px 50px 50px;
+}
+
+#myInput{
+    width: 270px;
+    height: 30px;
+    cursor: default;
+    /* float:center; */
+}
+
+span{
+    
+    width: 100px;
+}
+#addBtn{
+   cursor: pointer;
+   border-radius: 0px;
+   background-color: #fff;
+   border-style: solid;
+   border-color: gray;
+   margin-top: 100px;
+   width: 100px;
+   /* float: left; */
+}
+
+#addBtn:hover{ 
+    background-color: red;
+}
+
+#myTODOs{
+    cursor: pointer;
+}

@@ -1,40 +1,62 @@
-h2{
-    color: #000;
-    text-align: center;
+h2 {
+  color: #000;
+  text-align: center;
 }
-#myDIV{
-/* margin: 100px 50px 50px 50px; */
-background-color: aquamarine;
+#myDIV {
+  /* margin: 100px 50px 50px 50px; */
+  background-color: aquamarine;
+  text-align: center;
+  padding: 100px 400px 100px 400px;
+}
+
+#myInput {
+  width: 75%;
+  margin: 0;
+  cursor: default;
+  padding: 10px;
+  border: none;
+  border-radius: 0;
+  float: left;
+  font-size: 18px;
+}
+
+#addBtn {
+  cursor: pointer;
+  border-radius: 0;
+  background-color: rgb(171, 167, 167);
+  border: none;
+  
 text-align: center;
-padding: 100px 50px 50px 50px;
+  width: 15%;
+  font-size: 18px;
+  padding: 10px;
+  float: left;
 }
 
-#myInput{
-    width: 270px;
-    height: 30px;
-    cursor: default;
-    /* float:center; */
+#addBtn:hover {
+  background-color: rgb(99, 96, 96);
 }
+ul {
+  margin:0 ;
+  padding: 0;
+  background-color: bisque;
+}
+ul li {
+  margin: 0;
+padding: 20px;
+font-size: 18px;
 
-span{
-    
-    width: 100px;
 }
-#addBtn{
-   cursor: pointer;
-   border-radius: 0px;
-   background-color: #fff;
-   border-style: solid;
-   border-color: gray;
-   margin-top: 100px;
-   width: 100px;
-   /* float: left; */
+li:hover {
+  background-color: rgb(251, 193, 122);
 }
-
-#addBtn:hover{ 
-    background-color: red;
+#myTODOs {
+  cursor: pointer;
+  width: 100%;
+  list-style-type: none;
+  
 }
-
-#myTODOs{
-    cursor: pointer;
+ul li.checked{
+  text-decoration: line-through;
+  background-color: rgb(251, 193, 122);
 }

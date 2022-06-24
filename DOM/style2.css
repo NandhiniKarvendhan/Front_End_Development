@@ -10,7 +10,7 @@ h2 {
 }
 
 #myInput {
-  width: 75%;
+  width: 65%;
   margin: 0;
   cursor: default;
   padding: 10px;
@@ -19,15 +19,18 @@ h2 {
   float: left;
   font-size: 18px;
 }
+::placeholder {
+  font-style: italic;
+  font-size: 16px;
+}
 
 #addBtn {
   cursor: pointer;
   border-radius: 0;
   background-color: rgb(171, 167, 167);
   border: none;
-  
-text-align: center;
-  width: 15%;
+  text-align: center;
+  width: 20%;
   font-size: 18px;
   padding: 10px;
   float: left;
@@ -37,15 +40,21 @@ text-align: center;
   background-color: rgb(99, 96, 96);
 }
 ul {
-  margin:0 ;
+  margin: 0;
   padding: 0;
   background-color: bisque;
 }
 ul li {
   margin: 0;
-padding: 20px;
-font-size: 18px;
-
+  padding: 20px;
+  font-size: 18px;
+  color: rgb(99, 75, 47);
+  border-style: none none none solid;
+  border-width: 5px;
+  border-left-color: rgb(99, 75, 47);
+}
+li:nth-of-type(odd) {
+  background-color: rgb(246, 208, 161);
 }
 li:hover {
   background-color: rgb(251, 193, 122);
@@ -54,9 +63,10 @@ li:hover {
   cursor: pointer;
   width: 100%;
   list-style-type: none;
-  
 }
-ul li.checked{
+ul li.checked {
   text-decoration: line-through;
-  background-color: rgb(251, 193, 122);
+  background-color: rgb(213, 136, 42);
+  color: #fff;
+  border-left-color: rgb(180, 121, 54);
 }

@@ -2,6 +2,12 @@
 <html lang="en">
   <head>
     <title>Dynamic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
       .on {
@@ -11,25 +17,34 @@
         padding: 50px;
         text-align: center;
         border-style: solid;
-        font-size: 2em;
+        font-family: "Tangerine", cursive;
+        font-size: 5em;
+        border-radius: 20px;
       }
     </style>
   </head>
 
   <body>
+    <button onclick="toggle()">TOGGLE</button>
     <button onclick="on()">ON</button>
     <button onclick="off()">OFF</button>
     <div id="target">Target</div>
   </body>
 
   <script>
-    function on() {
+    function toggle() {
       const element = document.getElementById("target");
-      element.classList.add("on");
+      element.classList.toggle("on");
+    }
+    let timer = null;
+    function on() {
+      timer = setTimeout(() => {
+        toggle();
+        on();
+      }, 500);
     }
     function off() {
-      const element = document.getElementById("target");
-      element.classList.remove("on");
+      clearTimeout(timer);
     }
   </script>
 </html>

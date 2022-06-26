@@ -21,6 +21,7 @@
     </style>
   </head>
   <body>
+    <button onclick="move()">MOVE</button>
     <main class="content">
       <div id="s1">1</div>
       <div id="s2">2</div>
@@ -35,5 +36,14 @@
       <div id="s11">11</div>
       <div id="s12">12</div>
     </main>
+    <script>
+      // Styling the grid programmatically
+      function move() {
+        const element = document.querySelectorAll("div");
+        for (i = 0; i < element.length; i++) {
+          element[i].classList.add("on");
+        }
+      }
+    </script>
   </body>
 </html>

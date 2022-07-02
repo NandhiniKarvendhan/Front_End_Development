@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>DOM Manipulation- Insert</title>
     <link rel="stylesheet" type="text/css" href="./style2.css" />
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-
+  <body>
     <div id="myDIV" class="header">
-        <h2 style="margin:5px">My To Do List</h2><br>
-        <input type="text" id="myInput" placeholder="Type a TODO list...">
-        <span onclick="addItem()" id="addBtn">Add</span>
+      <h2 style="margin: 5px">My To Do List</h2>
+      <br />
+      <input type="text" id="myInput" placeholder="Type a TODO list..." />
+      <span onclick="addItem()" id="addBtn">Add</span>
     </div>
 
     <ul id="myTODOs">
-        <li>Write more JavaScript</li>
-        <li class="checked">Make coffee</li>
-        <li>Read JavaScript documentation</li>
-        <li>Build awesome apps</li>
+      <li>Write more JavaScript</li>
+      <li class="checked">Make coffee</li>
+      <li>Read JavaScript documentation</li>
+      <li>Build awesome apps</li>
     </ul>
 
     <script src="./insertDOM.js"></script>
-</body>
-
+  </body>
 </html>
-

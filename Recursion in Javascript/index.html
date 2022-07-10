@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Recursion in Javascript</title>
+  </head>
+  <body>
+    <script>
+      /* Sum all numbers */
+      // Write a function called sumRange. It will take a number and return the sum of all numbers from 1 up to the number passed in.
+      function sumRange(number) {
+        if (number == 1) return 1;
+        return number + sumRange(number - 1);
+      }
+
+      var output = sumRange(3);
+      console.log(output);
+
+      /* Power Function */
+      //   Write a function called power which takes in a base and an exponent. If the exponent is 0, return 1.
+      function power(base, exponent) {
+        if (exponent == 0) return 1;
+        return base * power(base, exponent - 1);
+      }
+      console.log(power(2, 4));
+
+      /* Calculate factorial */
+      /* Write a function that returns the factorial of a number.  
+      As a quick refresher, a factorial of a number is the result of that number multiplied by the number before it, 
+      and the number before that number, and so on, until you reach 1. The factorial of 1 is just 1.*/
+
+      function factorial(num) {
+        if (num == 1) return 1;
+        return num * factorial(num - 1);
+      }
+      console.log(factorial(5));
+    </script>
+  </body>
+</html>

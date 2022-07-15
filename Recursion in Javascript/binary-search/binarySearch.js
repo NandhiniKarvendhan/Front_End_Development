@@ -63,24 +63,33 @@ const searchForAlphabeticalIndex = (
     //find middle index between the given start and end, hint: use Math.floor(your calculation for the middle index between start and end) as that rounds down to the nearest integer, you are not searching decimals
     // for example for array from 0 to 49 (length is 50), you calculate midpoint by writing let midIndex = Math.floor((0+49) / 2)
     /* CODE GOES HERE */
+    if (startIndex > endIndex) {
+      binarySearchResults = -1;
+      return false;
+    }
+    let midIndex = Math.floor((startIndex + endIndex) / 2);
 
     //check if the value at midIndex is equal to the character being searched for, return true if so
     // before returning true inside the if statement, write the following line of code: binarySearchCharacterIndex = midIndex; // this sets the variable up top to the index the character was found at so you can see the result in browser
     // hint: make sure to use == or === to check if you found the number, single equals sign is only used for assigning values to variables, not checking equality
     /* CODE GOES HERE */
+    if (array[midIndex] === letter) {
+      binarySearchCharacterIndex = midIndex;
 
+      return true;
+    }
     // determine the if/else condition that should house these two return statements that recursively call the same function after splitting the data in one direction or another
     // note that just like 2 < 4 will evaluate to true, 'a' < 'b' will also evaluate true, javascript can compare letters just like numbers by their position in the alphabet
     // you need to write the if statement that will determine what condition needs to happen for you to search the lower half (start to middle) of the array rather than the upper half (middle to end) next
-    // if () {
-    //   // this return statement will continue the recursion by narrowing our search to the lower (start to middle) portion of the dataset
-    //   return recursiveBinarySearch(array, letter, startIndex, midIndex - 1);
-    // } else {
-    //   // this return statement will continue the recursion by narrowing our search to the upper (middle to end) portion of the dataset
-    //   return recursiveBinarySearch(array, letter, midIndex + 1, endIndex);
-    // }
+    if (array[midIndex] > letter) {
+      // this return statement will continue the recursion by narrowing our search to the lower (start to middle) portion of the dataset
+      return recursiveBinarySearch(array, letter, startIndex, midIndex - 1);
+    } else {
+      // this return statement will continue the recursion by narrowing our search to the upper (middle to end) portion of the dataset
+      return recursiveBinarySearch(array, letter, midIndex + 1, endIndex);
+    }
 
-    return false; // remove or comment out this line once you have un-commented the recursive calls above
+    // return false; // remove or comment out this line once you have un-commented the recursive calls above
   };
 
   // Invokes the recursiveBinarySearch you just defined, do not change the following

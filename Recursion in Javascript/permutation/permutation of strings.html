@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <script>
+      var string = "abcd";
+
+      function permute(string) {
+        if (string.length === 1) {
+          return string;
+        }
+        var pick = "";
+        var permutations = [];
+
+        for (let i = 0; i < string.length; i++) {
+          pick = string[i];
+          var remainder =
+            string.slice(0, i) + string.slice(i + 1, string.length);
+
+          for (var perm of permute(remainder)) {
+            permutations.push(pick + perm);
+          }
+        }
+        return permutations;
+      }
+      console.log(permute(string));
+    </script>
+  </body>
+</html>

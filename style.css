@@ -1,0 +1,27 @@
+body {
+  text-align: center;
+  margin: 0;
+  padding: 50px 200px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+h1 {
+  font-size: 40px;
+}
+p {
+  margin: 0;
+}
+.title {
+}
+.title-description {
+  line-height: 24px;
+}
+.projects {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  gap: 50px;
+}
+.project-title {
+  font-weight: 500;
+}

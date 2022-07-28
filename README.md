@@ -1,5 +1,15 @@
 # Front End Development
 
+This repository contains assignments and the projects I'have done during Post Graduate Certificate in Full Stack Development conducted by MIT xPRO.
+
+## How to run
+
+1. Download or clone this repository.
+
+2. Open index.html file in your browser. It opens a webpage that contains various projects done during Post Graduate Certificate in Full Stack Development conducted by MIT xPRO.
+
+3. Navigate through the projects by clicking project links given in the webpage.
+
 ## License information:
 
 MIT License

@@ -1,0 +1,79 @@
+<script>
+  /* ------------------ DEFAULT PARAMETERS ------------------ */
+
+  //   OLD WAY
+  function multiply(a, b) {
+    if (!b) b = 1;
+    return a * b;
+  }
+  console.log("Multiplication of 4 and 5:", multiply(4, 5));
+  console.log(multiply(4));
+
+  // Cleaner way using DEFAULT PARAMETERS in ES6
+  function multiply1(a, b = 1) {
+    return a * b;
+  }
+  console.log("Multiplication of 4 and 5:", multiply1(4, 5));
+  console.log(multiply1(4));
+  console.log(multiply1(4, undefined));
+
+  /* ------------------ Template Literals - Multiline Strings ------------------ */
+  /*  Humpty Dumpty sat on a wall
+        Humpty Dumpty had a great fall
+        All the king's horses and all the king's men
+        Couldn't put Humpty together again */
+
+  //   OLD WAY
+  let message =
+    "Humpty Dumpty sat on a wall." +
+    "Humpty Dumpty had a great fall." +
+    "All the king's horses and all the king's men." +
+    "Couldn't put Humpty together again.";
+  console.log(message);
+
+  // ES6 string backticks which allows us to define a block of text without having to do string concatenation.
+
+  let message1 = `Humpty Dumpty sat on a wall.
+        Humpty Dumpty had a great fall.
+        All the king's horses and all the king's men.
+        Couldn't put Humpty together again.`;
+  console.log(message1);
+
+  // we can put above msg in one line using '\'
+  let message2 = `Humpty Dumpty sat on a wall.\
+        Humpty Dumpty had a great fall.\
+        All the king's horses and all the king's men.\
+        Couldn't put Humpty together again.`;
+  console.log(message2);
+
+  /* ------------------ Template Literals  ------------------ */
+  //   you’ll use a template literal that has placeholders for expressions, which you’ll use to display a date.
+  //  OLD WAY
+  function prettyDate(day, dayNumber, month, year) {
+    const message =
+      "The date is " + day + "," + month + " " + dayNumber + "," + year;
+    return message;
+  }
+  const day = "thursday";
+  const dayNumber = "15";
+  const month = "december";
+  const year = "2050";
+  console.log(prettyDate(day, dayNumber, month, year));
+
+  // Using template literal with placeholders for expressions
+
+  function prettyDate1(day, dayNumber, month, year) {
+    const message = `The date is ${day},${month} ${dayNumber},${year}.`;
+    return message;
+  }
+  console.log(prettyDate1(day, dayNumber, month, year));
+
+  /* ------------------ Embedding Expressions Inside Template Literals  ------------------ */
+  //OLD WAY
+  let a = 5;
+  b = 10;
+  console.log("a+b is: " + (a + b) + " and not " + a * b);
+
+  //   Using Embedding Expressions Inside Template Literals
+  console.log(`a + b is ${a + b} and not ${a * b}.`);
+</script>

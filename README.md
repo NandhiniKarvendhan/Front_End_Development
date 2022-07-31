@@ -1,6 +1,6 @@
 # Front End Development
 
-This repository contains assignments and the projects I'have done during Post Graduate Certificate in Full Stack Development conducted by MIT xPRO.
+This repository contains assignments and the projects I'have done during Post Graduate Certificate in Full Stack Development with MERN conducted by MIT xPRO.
 
 ## How to run
 

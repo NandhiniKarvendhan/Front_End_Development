@@ -76,4 +76,65 @@
 
   //   Using Embedding Expressions Inside Template Literals
   console.log(`a + b is ${a + b} and not ${a * b}.`);
+
+  /* ------------------ Destructuring in ES6 ------------------ */
+  //   Destructuring assignment allows you to unpack values from arrays and objects into variables.
+  //    Array Destructuring
+  //   Example 1:
+  let x, y, rest;
+  [x, y, ...rest] = [10, 20, 30, 40, 50];
+  console.log(x);
+  console.log(y);
+  console.log(rest);
+  //  Example 2:
+  const books = ["fiction", ["horror", "literary"], "science"];
+  const [fiction, [horror, literary], science] = books;
+  console.log(fiction, horror, literary, science);
+
+  //  Object Destructuring
+  //   Example 1:
+  let x1, y1, rest1;
+  ({ x1, y1, ...rest1 } = { x1: 10, y1: 20, c: 30, d: 40, e: 50 });
+  console.log(x1);
+  console.log(y1);
+  console.log(rest1);
+
+  // Example 2:
+  const Student = {
+    firstName: "Joe",
+    university: "MIT",
+    studentInfo: {
+      studentid: 555,
+    },
+  };
+
+  const {
+    firstName,
+    university,
+    studentInfo: { studentid: studentid },
+  } = Student;
+  console.log(firstName, university, studentid);
+
+  /* ------------------ Destructuring - Functions in ES6 ------------------ */
+  //  To unpack values that are returned as a parameter from a function
+  // Array
+  function f() {
+    return [1, 2, 3, 4];
+  }
+  const [num1, num2] = f();
+  console.log(num1);
+  console.log(num2);
+
+  //   Object
+  const user = {
+    id: 209,
+    firstname: "peter",
+    lastName: "parker",
+    age: 19,
+  };
+
+  function userId({ id }) {
+    return id;
+  }
+  console.log(userId(user));
 </script>

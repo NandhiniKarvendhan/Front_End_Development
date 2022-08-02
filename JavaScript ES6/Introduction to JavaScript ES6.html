@@ -19,9 +19,9 @@
 
   /* ------------------ Template Literals - Multiline Strings ------------------ */
   /*  Humpty Dumpty sat on a wall
-        Humpty Dumpty had a great fall
-        All the king's horses and all the king's men
-        Couldn't put Humpty together again */
+          Humpty Dumpty had a great fall
+          All the king's horses and all the king's men
+          Couldn't put Humpty together again */
 
   //   OLD WAY
   let message =
@@ -34,16 +34,16 @@
   // ES6 string backticks which allows us to define a block of text without having to do string concatenation.
 
   let message1 = `Humpty Dumpty sat on a wall.
-        Humpty Dumpty had a great fall.
-        All the king's horses and all the king's men.
-        Couldn't put Humpty together again.`;
+          Humpty Dumpty had a great fall.
+          All the king's horses and all the king's men.
+          Couldn't put Humpty together again.`;
   console.log(message1);
 
   // we can put above msg in one line using '\'
   let message2 = `Humpty Dumpty sat on a wall.\
-        Humpty Dumpty had a great fall.\
-        All the king's horses and all the king's men.\
-        Couldn't put Humpty together again.`;
+          Humpty Dumpty had a great fall.\
+          All the king's horses and all the king's men.\
+          Couldn't put Humpty together again.`;
   console.log(message2);
 
   /* ------------------ Template Literals  ------------------ */
@@ -137,4 +137,84 @@
     return id;
   }
   console.log(userId(user));
+
+  /* ------------------ Spread And Rest ------------------ */
+  // REST - Rest allows you to collect the rest of the elements from an array into a variable.
+  let numbers = [1, 2, 3, 4, 5];
+  let [first, ...rest2] = numbers;
+  console.log(first);
+  console.log(rest2);
+
+  // SPREAD - Spread allows you to unpack the elements from an array into variables.
+  let [c1, d1, e1, f1, g1] = numbers;
+  console.log(c1);
+  console.log(d1);
+  console.log(e1);
+  console.log(f1);
+  console.log(g1);
+
+  /* ------------------ Spread - Value And Reference ------------------ */
+  /* Using the spread notation '...' to make a copy of an array without making a reference to the original array.
+    This will allow you to make changes to the copied array without altering the original array.*/
+  let numbers1 = [0, 1, 2, 3, 4, 5];
+  let mycopy = [...numbers1];
+  mycopy[2] = 9;
+  console.log(mycopy);
+  console.log(numbers1);
+
+  // ASSIGNMENT
+  const terrestrials = ["fox", "lion", "elephant"];
+  const aquatics = ["shark", "whale", "octopus"];
+
+  // TODO: create the array allAnimals that contains all animals from terrestrials and aquatics arrays
+  const allAnimals = [...terrestrials, ...aquatics];
+  console.log(JSON.stringify(allAnimals));
+
+  /* ------------------  Merge Arrays ------------------ */
+  // Using spread to merge arrays without creating nested arrays.
+  let l1 = [1, 2, 3];
+  let l2 = [4, 5, 6];
+  let newList = [...l1, ...l2];
+  console.log(newList);
+  console.log(JSON.stringify(newList));
+
+  /* ------------------  Enhanced Object Literals  ------------------ */
+  // OLD WAY
+  const A = "one";
+  const B = "two";
+  const Obj1 = { a: A, b: B };
+  console.log(Obj1.b);
+
+  // In es6 use object literals notation to easily combine objects.
+  const Obj2 = { A, B };
+  console.log(Obj2.B);
+
+  /* ------------------   Arrow Functions ------------------ */
+
+  function greeting() {
+    return "hello";
+  }
+  console.log(greeting());
+  // Arrow function
+  var greeting = () => "hello";
+  console.log(greeting());
+
+  // Arrow function with parameters
+  var add = (a, b) => a + b;
+  console.log(add(4, 2));
+
+  // number labels
+  var Number = ["one", "two", "three"];
+
+  // classic callback
+  var output = Number.map(function (label) {
+    return label.length;
+  });
+  console.log(output);
+
+  // Arrow function in classic callback
+  var output = Number.map((label) => label.length);
+  console.log(output);
+
+  /*--------------------------------------------------------------------------- */
 </script>

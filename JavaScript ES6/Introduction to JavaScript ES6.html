@@ -140,10 +140,27 @@
 
   /* ------------------ Spread And Rest ------------------ */
   // REST - Rest allows you to collect the rest of the elements from an array into a variable.
+
+  // Example1
   let numbers = [1, 2, 3, 4, 5];
   let [first, ...rest2] = numbers;
   console.log(first);
   console.log(rest2);
+
+  // Assignment
+  // Create a function called sumAll that will return the sum of any number of arguments passed to it.
+
+  function sumAll(...n) {
+    return n.reduce(function (prevValue, currentValue) {
+      console.log(`Previous Value : ${prevValue}`);
+      console.log(`current value : ${currentValue}`);
+      return prevValue + currentValue;
+    });
+  }
+
+  console.log(sumAll(1, 2)); // expected output: 3
+  console.log(sumAll(1, 2, 3)); // expected output: 6
+  console.log(sumAll(1, 2, 3, 4, 5, 6)); // expected output: 10
 
   // SPREAD - Spread allows you to unpack the elements from an array into variables.
   let [c1, d1, e1, f1, g1] = numbers;

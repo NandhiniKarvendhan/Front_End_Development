@@ -60,34 +60,53 @@
   // write your own fruit object and fill in all the properties
   myfruit = {
     id: 0,
-    name: "plum",
-    description: "A plum is a purple fruit.",
+    name: "Watermelon",
+    description:
+      "Watermelon is a sweet and refreshing low calorie summer snack. It provides hydration and also essential nutrients, including vitamins, minerals, and antioxidants.",
+
     image:
-      "https://cdn.shopify.com/s/files/1/0610/2881/products/cherries.jpg?v=1446676415",
-    price: 220,
+      "https://www.google.com/imgres?imgurl=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fbig-watermelon-slice-white-background-as-package-design-element-44517200.jpg&imgrefurl=https%3A%2F%2Fwww.dreamstime.com%2Fphotos-images%2Fwatermelon.html&tbnid=6RBQaJZH8TnfBM&vet=12ahUKEwi5tIyz-dn5AhUmxqACHfktDzgQMygJegUIARD-AQ..i&docid=9X4-Kiz_kvl0UM&w=800&h=637&q=watermelon&hl=en&ved=2ahUKEwi5tIyz-dn5AhUmxqACHfktDzgQMygJegUIARD-AQ",
+    price: 100,
   };
   // Add your fruit to array of fruits and make it the first one in the array
+  data.fruits = [myfruit, ...data.fruits];
+  let data1 = data.fruits;
 
   // I put fruits (listed by id) into my shopping cart =  [0, 3, 4, 5, 3]
 
   // Write a function to calculate how much I will pay at checkout
   cart = [0, 3, 4, 5, 3];
+
   const getCostOf = (id) => {
-    // fill in here
+    return data1.filter((item) => item.id == id)[0].price;
   };
+  console.log(getCostOf(0));
   const getTotal = (cart) => {
-    // Fill in here
-    return total;
-  };
-  // write a function to fill the shopping cart with random fruits
-  // up to my limit of 1000
-  // write out the actual cost of the food in the cart eg 980
-  const getRandom = (scale) => {};
-  const fillCart = (cart = []) => {
-    // hint use Math.random() to get a number between 0 and 1 then scale it to some integer
+    let total = 0;
+    cart.map((item) => (total += getCostOf(item)));
 
     return total;
   };
+  console.log(getTotal(cart));
+
+  //   // write a function to fill the shopping cart with random fruits
+  //   // up to my limit of 1000
+  //   // write out the actual cost of the food in the cart eg 980
+  const getRandom = (scale) => {
+    return Math.floor(Math.random() * scale);
+  };
+  console.log(getRandom(7));
+  const fillCart = (cart = []) => {
+    // hint use Math.random() to get a number between 0 and 1 then scale it to some integer
+    let total = 0;
+    while (true) {
+      nextItem = getRandom(7);
+      if (total + getCostOf(nextItem) < 1000) {
+        cart.push(nextItem);
+        total += getCostOf(nextItem);
+      } else return total;
+    }
+  };
   cart = [];
-  fillCart(cart);
+  console.log(fillCart(cart));
 </script>

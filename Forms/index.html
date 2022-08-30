@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Order Form</title>
+  </head>
+  <body>
+    <h1>Order Your Pizza</h1>
+    <form id="form">
+      <div>Name:</div>
+      <input id="name" type="text" />
+      <div>Size:</div>
+      <select id="size">
+        <option>small</option>
+        <option>medium</option>
+        <option>large</option>
+        <option>extra large</option>
+      </select>
+      <div>Pepperoni</div>
+      <input id="pepp" type="checkbox" />
+      <div>Gluten Free</div>
+      <input id="gfree" type="checkbox" />
+      <div>Quantity</div>
+      <input id="quantity" type="number" />
+      <div>Additional Instructions:</div>
+      <input id="instr" type="textarea" cols="50" rows="3" />
+      <button type="submit" id="mySubmit" onclick="handle(event)">
+        Submit
+      </button>
+    </form>
+    <script>
+      function handle(e) {
+        console.log(e.target.form.elements);
+        console.log(e.target.form.elements.name.value);
+        console.log(e.target.form.elements.size.value);
+        console.log(e.target.form.elements.pepp.checked);
+        console.log(e.target.form.elements.gfree.checked);
+        console.log(e.target.form.elements.quantity.value);
+        console.log(e.target.form.elements.instr.value);
+        event.preventDefault();
+      }
+    </script>
+  </body>
+</html>

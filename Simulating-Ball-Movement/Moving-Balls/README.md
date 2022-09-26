@@ -2,6 +2,8 @@
 
 In this project, seven balls are moving horizontally with different speeds using setInterval function.
 
+**[Demo]**(https://nandhinikarvendhan.github.io/Front_End_Development/Simulating-Ball-Movement/Moving-Balls/)
+
 # How to run
 
 1. Download or clone this repository.

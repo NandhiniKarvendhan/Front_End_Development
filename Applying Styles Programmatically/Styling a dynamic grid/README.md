@@ -2,6 +2,8 @@
 
 In this project, we are going to create a web page containing a dynamic grid with 100 cells by clicking CREATE GRID button and MOVE button is used to change the background color of the grid cells from one cell to next every 100ms.
 
+## [Demo](https://nandhinikarvendhan.github.io/Front_End_Development/Applying Styles Programmatically/Styling a dynamic grid/)
+
 ## How to run
 
 1. Download or clone this repository.

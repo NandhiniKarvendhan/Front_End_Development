@@ -3,6 +3,8 @@
 In this project, searchForAlphabeticalIndex function splits the dataset with each iteration by calculating the mid-point and checks whether the mid-point is what you are searching for and
 if the mid-point is not what you are searching for, the function checks which half of the split data contains the target by using the recursive nature of this function that is after completing one iteration, it calls itself (on smaller and smaller data-sets) until either the target is found, or the search is complete without the target being found.
 
+## [Demo](https://nandhinikarvendhan.github.io/Front_End_Development/Recursion%20in%20Javascript/binary-search/)
+
 ## How to run
 
 1. Download or clone this repository.

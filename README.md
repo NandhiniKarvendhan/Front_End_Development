@@ -2,6 +2,8 @@
 
 This repository contains assignments and the projects I'have done during Post Graduate Certificate in Full Stack Development with MERN conducted by MIT xPRO.
 
+**[List of Front End Projects](https://nandhinikarvendhan.github.io/Front_End_Development/)**
+
 ## How to run
 
 1. Download or clone this repository.
